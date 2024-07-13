@@ -1,7 +1,6 @@
-import ffmpeg
-import subprocess
 import os
 import cv2
+import ffmpeg
 import tempfile
 import numpy as np
 
@@ -60,7 +59,6 @@ def detect_in_video(file):
     os.remove(output_file_path)
     return final_output_path
 
-# Individual frame of live video feed is given as input frame
 def live_detect(frame):  
     frame = np.frombuffer(frame, np.uint8)
     frame = cv2.imdecode(frame, cv2.IMREAD_COLOR)

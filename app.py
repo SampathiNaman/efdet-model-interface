@@ -70,4 +70,4 @@ def process_frame():
 
 
 if __name__ == '__main__':
-    app.run(ssl_context='adhoc')
+    app.run(debug=False)
